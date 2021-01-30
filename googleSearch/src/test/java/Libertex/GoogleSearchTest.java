@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class GoogleSearchTest {
 
-    private WebDriver driver;
     private final static String GOOGLE_URL = "https://www.google.com/";
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
@@ -22,13 +21,6 @@ public class GoogleSearchTest {
         WebDriverManager.chromedriver().setup();
         // Un-comment next line for headless mode.
         //Configuration.headless = true;
-    }
-
-    @AfterTest
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
 
     @Test(priority = 0)
